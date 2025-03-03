@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "WPCA"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Introduction
+      - href: pages/part1.qmd
+        text: Part 1, Theory 
+      - href: pages/part2.qmd
+        text: Part 2, Pratice with FactoMineR
+      - href: pages/part3.qmd
+        text: Part 3, Group Activity
+      - href: pages/part4.qmd
+        text: Part 4, Take-Aways 
+      - href: pages/part5.qmd
+        text: Part 5, Q&A and feedback 
+      - icon: github
+        href: https://github.com/vguillemot/wpca
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

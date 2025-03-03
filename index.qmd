@@ -1,0 +1,80 @@
+---
+title: "R Workshop: Principal Component Analysis"
+format:
+  html:
+    code-fold: true
+    code-summary: "Solution"
+---
+
+## Objectives
+
+  * Define the fundamental concepts of Principal Component Analysis (eigenvalues, eigenvectors, variance, and covariance/correlation matrices).
+  * Explain the purpose of PCA and how it reduces dimensionality while preserving variance.
+  * Perform PCA using the FactoMineR package in R on a given dataset.
+  * Interpret PCA results (eigenvalues, contributions, squared cosine values, and biplots) to draw meaningful conclusions.
+
+## Schedule
+
+| **Time** | **Activity**                                                     | **Where** |
+|--------- |------------------------------------------------------------------|--------------|
+| **1:30 PM - 1:45 PM** | **Quiz** (Statistics & R) | [Kahoot](https://kahoot.it/) |
+| **1:45 PM - 2:00 PM** | **Icebreaker** | |
+| **2:00 PM - 2:30 PM** | **Theoretical Introduction to PCA** | [Part 1, theory](pages/part1.qmd) |
+| **2:30 PM - 3:00 PM** | **Activity: run PCA in R and explore the results** | [Part 2, FactoMineR](pages/part2.qmd) |
+| **3:00 PM - 3:15 PM** | **Break** | --- |
+| **3:15 PM - 4:30 PM** | **Group Activity: Reproducing a PCA from a Scientific Study** | [Part 3, activity](pages/part3.qmd) |
+| **4:30 PM - 4:45 PM** | **Summary & Key Takeaways** | [Part 4, take-aways](pages/part4.qmd) |
+| **4:45 PM - 5:00 PM** | **Q&A and Course Feedback** | [Part 5](pages/part5.qmd) |
+
+## Important documents
+
+The shared document to write R code is located [here](https://docs.google.com/document/d/1q2WzfESUpgUF56dALGUuw5x7kQ8Qk0_0OJN97L8b8Iw/edit?usp=sharing)
+
+## Prerequisites
+
+Before class, you were asked to reproduce, with R, the following Figure from a [recent publication](https://www.nature.com/articles/s41586-024-08475-w) with the associated [data](https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-024-08475-w/MediaObjects/41586_2024_8475_MOESM5_ESM.xlsx)
+
+![](material/fig1.png){width=30%}
+
+Below is the solution that I propose.
+
+```{r solution, echo = TRUE, out.width="40%", fig.width = 5, warning = FALSE, message=FALSE}
+## I'm using mainly tidyverse functions
+library(dplyr)
+library(readxl)
+library(ggplot2)
+library(tidyr)
+
+## I saved the xlsx file in data/dataset_fig1.xlsx
+dat <- read_excel("data/dataset_fig1.xlsx", sheet = 2, skip = 2) %>%
+  rename(condition = sample) %>%
+  pivot_longer(
+    cols = -condition,
+    names_to = "replicate",
+    values_to = "stability") %>%
+  mutate(
+    condition = factor(
+      x = condition,
+      levels = c("-[COOH]", "-[CONH2]", "RxxG")))
+
+## Plot
+dat %>%
+  ggplot(aes(x = condition, y = stability)) + 
+  stat_summary(geom = "bar", fun = "mean", fill = "salmon") +
+  geom_point() + 
+  scale_y_continuous(limits = c(0, 125), breaks = 25 * (0:5)) + 
+  theme_bw() + 
+  labs(
+    x = "",
+    y = latex2exp::TeX("Percentage fluorescence versus \\textit{$t_0$}"),
+    title = "HEK293T mCherry-[X]") + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+
+
+## References
+
+
+
