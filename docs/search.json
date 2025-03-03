@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "pages/part5.html",
+    "href": "pages/part5.html",
+    "title": "part5",
+    "section": "",
+    "text": "Before you go, please answer this very short Feedback Form."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R Workshop: Principal Component Analysis",
+    "section": "",
+    "text": "Define the fundamental concepts of Principal Component Analysis (eigenvalues, eigenvectors, variance, and covariance/correlation matrices).\nExplain the purpose of PCA and how it reduces dimensionality while preserving variance.\nPerform PCA using the FactoMineR package in R on a given dataset.\nInterpret PCA results (eigenvalues, contributions, squared cosine values, and biplots) to draw meaningful conclusions."
+  },
+  {
+    "objectID": "index.html#objectives",
+    "href": "index.html#objectives",
+    "title": "R Workshop: Principal Component Analysis",
+    "section": "",
+    "text": "Define the fundamental concepts of Principal Component Analysis (eigenvalues, eigenvectors, variance, and covariance/correlation matrices).\nExplain the purpose of PCA and how it reduces dimensionality while preserving variance.\nPerform PCA using the FactoMineR package in R on a given dataset.\nInterpret PCA results (eigenvalues, contributions, squared cosine values, and biplots) to draw meaningful conclusions."
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "R Workshop: Principal Component Analysis",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\nTime\nActivity\nWhere\n\n\n\n\n1:30 PM - 1:45 PM\nQuiz (Statistics & R)\nKahoot\n\n\n1:45 PM - 2:00 PM\nIcebreaker\n\n\n\n2:00 PM - 2:30 PM\nTheoretical Introduction to PCA\nPart 1, theory\n\n\n2:30 PM - 3:00 PM\nActivity: run PCA in R and explore the results\nPart 2, FactoMineR\n\n\n3:00 PM - 3:15 PM\nBreak\n—\n\n\n3:15 PM - 4:30 PM\nGroup Activity: Reproducing a PCA from a Scientific Study\nPart 3, activity\n\n\n4:30 PM - 4:45 PM\nSummary & Key Takeaways\nPart 4, take-aways\n\n\n4:45 PM - 5:00 PM\nQ&A and Course Feedback\nPart 5"
+  },
+  {
+    "objectID": "index.html#important-documents",
+    "href": "index.html#important-documents",
+    "title": "R Workshop: Principal Component Analysis",
+    "section": "Important documents",
+    "text": "Important documents\nThe shared document to write R code is located here"
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "R Workshop: Principal Component Analysis",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nBefore class, you were asked to reproduce, with R, the following Figure from a recent publication with the associated data\n\nBelow is the solution that I propose.\n\n\nSolution\n## I'm using mainly tidyverse functions\nlibrary(dplyr)\nlibrary(readxl)\nlibrary(ggplot2)\nlibrary(tidyr)\n\n## I saved the xlsx file in data/dataset_fig1.xlsx\ndat &lt;- read_excel(\"data/dataset_fig1.xlsx\", sheet = 2, skip = 2) %&gt;%\n  rename(condition = sample) %&gt;%\n  pivot_longer(\n    cols = -condition,\n    names_to = \"replicate\",\n    values_to = \"stability\") %&gt;%\n  mutate(\n    condition = factor(\n      x = condition,\n      levels = c(\"-[COOH]\", \"-[CONH2]\", \"RxxG\")))\n\n## Plot\ndat %&gt;%\n  ggplot(aes(x = condition, y = stability)) + \n  stat_summary(geom = \"bar\", fun = \"mean\", fill = \"salmon\") +\n  geom_point() + \n  scale_y_continuous(limits = c(0, 125), breaks = 25 * (0:5)) + \n  theme_bw() + \n  labs(\n    x = \"\",\n    y = latex2exp::TeX(\"Percentage fluorescence versus \\\\textit{$t_0$}\"),\n    title = \"HEK293T mCherry-[X]\") + \n  theme(axis.text.x = element_text(angle = 45, hjust = 1))"
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "R Workshop: Principal Component Analysis",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "pages/about.html",
+    "href": "pages/about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]
