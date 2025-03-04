@@ -19,18 +19,19 @@ format:
 |--------- |------------------------------------------------------------------|--------------|
 | **1:30 PM - 1:45 PM** | **Quiz** (Statistics & R) | [Kahoot](https://kahoot.it/) |
 | **1:45 PM - 2:00 PM** | **Icebreaker** | |
-| **2:00 PM - 2:30 PM** | **Theoretical Introduction to PCA** | [Part 1, theory](pages/part1.qmd) |
-| **2:30 PM - 3:00 PM** | **Activity: run PCA in R and explore the results** | [Part 2, FactoMineR](pages/part2.qmd) |
-| **3:00 PM - 3:15 PM** | **Break** | --- |
-| **3:15 PM - 4:30 PM** | **Group Activity: Reproducing a PCA from a Scientific Study** | [Part 3, activity](pages/part3.qmd) |
-| **4:30 PM - 4:45 PM** | **Summary & Key Takeaways** | [Part 4, take-aways](pages/part4.qmd) |
-| **4:45 PM - 5:00 PM** | **Q&A and Course Feedback** | [Part 5](pages/part5.qmd) |
+| **2:00 PM - 2:45 PM** | **Theoretical Introduction to PCA** | [Part 1, theory](pages/part1.qmd) |
+| **2:45 PM - 3:15 PM** | **Activity: run PCA in R and explore the results** | [Part 2, FactoMineR](pages/part2.qmd) |
+| **3:15 PM - 3:30 PM** | **Break** | --- |
+| **3:30 PM - 5:00 PM** | **Group Activity: Reproducing a PCA from a Scientific Study** | [Part 3, activity](pages/part3.qmd) |
+| **5:00 PM - 5:15 PM** | **Summary & Key Takeaways** | [Part 4, take-aways](pages/part4.qmd) |
+| **5:15 PM - 5:30 PM** | **Q&A and Course Feedback** | [Part 5](pages/part5.qmd) |
 
 ## Important documents
 
 The shared document to write R code is located [here](https://docs.google.com/document/d/1q2WzfESUpgUF56dALGUuw5x7kQ8Qk0_0OJN97L8b8Iw/edit?usp=sharing)
 
 Links to
+
   * [simulated dataset](material/simulated_data.xlsx)
   * [fruits and vegetables dataset](material/fruits_et_legumes.xlsx)
 

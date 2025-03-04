@@ -74,14 +74,14 @@
     "href": "index.html#schedule",
     "title": "R Workshop: Principal Component Analysis",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nTime\nActivity\nWhere\n\n\n\n\n1:30 PM - 1:45 PM\nQuiz (Statistics & R)\nKahoot\n\n\n1:45 PM - 2:00 PM\nIcebreaker\n\n\n\n2:00 PM - 2:30 PM\nTheoretical Introduction to PCA\nPart 1, theory\n\n\n2:30 PM - 3:00 PM\nActivity: run PCA in R and explore the results\nPart 2, FactoMineR\n\n\n3:00 PM - 3:15 PM\nBreak\n—\n\n\n3:15 PM - 4:30 PM\nGroup Activity: Reproducing a PCA from a Scientific Study\nPart 3, activity\n\n\n4:30 PM - 4:45 PM\nSummary & Key Takeaways\nPart 4, take-aways\n\n\n4:45 PM - 5:00 PM\nQ&A and Course Feedback\nPart 5"
+    "text": "Schedule\n\n\n\nTime\nActivity\nWhere\n\n\n\n\n1:30 PM - 1:45 PM\nQuiz (Statistics & R)\nKahoot\n\n\n1:45 PM - 2:00 PM\nIcebreaker\n\n\n\n2:00 PM - 2:45 PM\nTheoretical Introduction to PCA\nPart 1, theory\n\n\n2:45 PM - 3:15 PM\nActivity: run PCA in R and explore the results\nPart 2, FactoMineR\n\n\n3:15 PM - 3:30 PM\nBreak\n—\n\n\n3:30 PM - 5:00 PM\nGroup Activity: Reproducing a PCA from a Scientific Study\nPart 3, activity\n\n\n5:00 PM - 5:15 PM\nSummary & Key Takeaways\nPart 4, take-aways\n\n\n5:15 PM - 5:30 PM\nQ&A and Course Feedback\nPart 5"
   },
   {
     "objectID": "index.html#important-documents",
     "href": "index.html#important-documents",
     "title": "R Workshop: Principal Component Analysis",
     "section": "Important documents",
-    "text": "Important documents\nThe shared document to write R code is located here\nLinks to * simulated dataset * fruits and vegetables dataset"
+    "text": "Important documents\nThe shared document to write R code is located here\nLinks to\n\nsimulated dataset\nfruits and vegetables dataset"
   },
   {
     "objectID": "index.html#prerequisites",
