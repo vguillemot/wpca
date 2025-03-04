@@ -18,8 +18,6 @@ website:
         text: Part 4, Take-Aways 
       - href: pages/part5.qmd
         text: Part 5, Q&A and feedback 
-      - icon: github
-        href: https://github.com/vguillemot/wpca
 
 format:
   html:
