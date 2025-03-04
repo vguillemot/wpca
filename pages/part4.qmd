@@ -1,5 +1,13 @@
 ---
-title: "part4"
+title: ""
 format: html
 ---
 
+When running a PCA, be mindful of the following points:
+
+  * is your data "clean" (missing values, weird distribution, proper names etc.)?
+  * is your data in the correct format (i.e. wide format, with observations as rows and variables as columns)
+  * are your variables all quantitative? If not, which variables are "illustrative" (e.g. groups)
+  * should you run a "standardized" or a "non-standardized" PCA?
+  * did you check the scree-plot?
+  * whats does the correlation circle tell about the relationship between variables?

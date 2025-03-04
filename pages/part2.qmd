@@ -1,5 +1,33 @@
 ---
-title: "part2"
+title: ""
 format: html
 ---
 
+
+In this part, appply the functions that you saw earlier to the "fruits and vegetables" dataset.
+[Link to dataset](../material/fruits_et_legumes.xlsx)
+
+Below is a random selection of 20 fruits and vegetables.
+
+|nom                                                           |ssgroupe      | Energie|  Eau| Proteines| Glucides| Lipides| Sucres| Fibres|
+|:-------------------------------------------------------------|:-------------|-------:|----:|---------:|--------:|-------:|------:|------:|
+|Potimarron, pulpe, cuit à l'étouffée                          |légumes cuits |    43.2| 87.3|      1.31|     7.05|    0.50|   4.50|   3.30|
+|Tétragone cornue, cuite                                       |légumes cuits |    16.5| 94.8|      1.30|     1.00|    0.17|   0.25|   1.40|
+|Chou-fleur, surgelé, cru                                      |légumes crus  |    28.7| 92.5|      2.09|     2.64|    0.37|   1.91|   1.82|
+|Maïs doux, en épis, surgelé, cru                              |légumes crus  |    98.6| 73.3|      3.36|    17.00|    1.19|   3.78|   2.65|
+|Maïs doux, appertisé, égoutté                                 |légumes cuits |   106.0| 75.4|      2.82|    18.40|    1.68|   5.16|   3.10|
+|Bambou, pousse, crue                                          |légumes crus  |    38.7| 89.8|      2.52|     5.08|    0.20|   3.00|   1.45|
+|Mûre (de ronce), crue                                         |fruits crus   |    42.2| 86.1|      1.13|     6.53|    0.70|   6.10|   5.20|
+|Gombo, fruit, cuit                                            |légumes cuits |    23.6| 92.6|      1.87|     2.01|    0.21|   2.01|   2.50|
+|Fruit de la passion ou maracudja, pulpe et pépins, cru        |fruits crus   |    85.8| 73.6|      2.13|    10.90|    3.00|   8.50|   6.80|
+|Épinard, cuit                                                 |légumes cuits |    23.6| 92.8|      3.20|     0.50|    0.14|   0.47|   2.70|
+|Salsifis, surgelé, cru                                        |légumes crus  |    35.2| 85.8|      2.65|     4.15|    0.15|   2.50|   5.80|
+|Petits pois et carottes, surgelés, crus                       |légumes crus  |    54.9| 82.3|      3.89|     7.10|    0.37|   3.43|   4.30|
+|Chou vert, cuit                                               |légumes cuits |    25.8| 93.9|      1.03|     3.04|    0.45|   2.79|   2.40|
+|Tomate, coulis, appertisé (purée de tomates mi-réduite à 11%) |légumes cuits |    49.8| 88.2|      2.05|     8.53|    0.20|   5.50|   2.60|
+|Légume cuit (aliment moyen)                                   |légumes cuits |    40.4| 88.3|      2.11|     5.81|    0.30|   2.48|   2.71|
+|Artichaut, cuit                                               |légumes cuits |    23.6| 85.8|      2.53|     0.99|    0.28|   0.99|   8.30|
+|Chou de Bruxelles, surgelé, cuit                              |légumes cuits |    42.7| 86.7|      3.64|     4.22|    0.39|   2.08|   4.10|
+|Rutabaga, cuit                                                |légumes cuits |    27.5| 91.5|      0.93|     4.26|    0.18|   3.95|   1.80|
+|Carotte, cuite à la vapeur                                    |légumes cuits |    39.1| 87.7|      0.63|     7.33|    0.30|   6.90|   3.70|
+|Asperge, verte, crue                                          |légumes crus  |    27.2| 92.5|      2.46|     2.03|    0.27|   1.50|   2.15|

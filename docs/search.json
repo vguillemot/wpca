@@ -2,9 +2,37 @@
   {
     "objectID": "pages/part5.html",
     "href": "pages/part5.html",
-    "title": "part5",
+    "title": "WPCA",
     "section": "",
     "text": "Before you go, please answer this very short Feedback Form."
+  },
+  {
+    "objectID": "pages/part3.html",
+    "href": "pages/part3.html",
+    "title": "PCA examples",
+    "section": "",
+    "text": "PCA examples\nI chose two recent papers published in Nature in which PCA was used. Click on the tab corresponding to your group and follow the instructions. Prepare a 5-slide presentation in which you will (quickly) explain the context, and detail your progress when trying to reproduce the PCA-related figure.\nNB: It is not necessary to download the count matrix, unless you are curious about the difference between running the PCA on count data vs. pre-processed data\n\nGroup 1Group 2\n\n\nThe paper from which your figure was extracted is\n\nBosch, M., Kallin, N., Donakonda, S. et al. A liver immune rheostat regulates CD8 T cell immunity in chronic HBV infection. Nature 631, 867–875 (2024). https://doi.org/10.1038/s41586-024-07630-7\n\n\nRead the paper.\nDownload the pre-processed data that I created from the public data-set GSE168096.\nExplore quickly this data-set. Try to imagine, from indications given in the paper, the steps that were required to go from the count matrix to this file.\nReproduce Figure 1-h.\n\n\nLink to compressed data\n\n\nThe paper from which your figure was extracted is\n\nRuetz, T.J., Pogson, A.N., Kashiwagi, C.M. et al. CRISPR–Cas9 screens reveal regulators of ageing in neural stem cells. Nature 634, 1150–1159 (2024). https://doi.org/10.1038/s41586-024-07972-2\n\n\nRead the paper.\nDownload the pre-processed data that I created from the public data-set GSE189251.\nExplore quickly this data-set. Try to imagine, from indications given in the paper, the steps that were required to go from the count matrix to this file.\nReproduce Supplementary Figure 1-d.\n\n\nLink to compressed data"
+  },
+  {
+    "objectID": "pages/part1.html",
+    "href": "pages/part1.html",
+    "title": "WPCA",
+    "section": "",
+    "text": "Link to the slides"
+  },
+  {
+    "objectID": "pages/part1.html#simulated-data",
+    "href": "pages/part1.html#simulated-data",
+    "title": "WPCA",
+    "section": "(Simulated) Data",
+    "text": "(Simulated) Data\nI simulated a 3-dimensional dataset to illustrate this section. In this example, there are:\n\n6 (simulated human) subjects, 3 of them are healthy, and 3 of them have [insert here your favorite auto-immune disease],\n3 variables are measured on these subjects: CRP1, Serum Creatinine (SC)2, and Cystatin C (CC)3.\n\nLink to dataset\nWith this (somewhat not so realistic) example, I want to illustrate a situation where one variable stands alone (CRP) and the other two are very correlated, and at the same time, I want two groups of subjects that have very different mean CRPs. The values are reported in the table below.\n\n\n\n\n\n\n\n\n\nstatus\nCRP\nSC\nCC\n\n\n\n\nH\n2.111\n0.9527\n1.071\n\n\nH\n1.246\n2.335\n2.374\n\n\nH\n1.42\n1.184\n-0.1509\n\n\nD\n7.517\n-0.229\n-0.3311\n\n\nD\n5.671\n1.786\n0.9783\n\n\nD\n4.535\n-0.02739\n0.2584\n\n\n\nBelow is represented the correlation matrix as a correlogram.\n\n\n\n\n\n\n\n\n\nAnd the 3D plot representing all the data is shown below."
+  },
+  {
+    "objectID": "pages/part1.html#footnotes",
+    "href": "pages/part1.html#footnotes",
+    "title": "WPCA",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nCRP (C-reactive protein) is a clinical marker of inflammation. “In healthy adults, the normal concentrations of CRP varies between 0.8 mg/L and 3.0 mg/L. (..) CRP concentrations between 2 and 10 mg/L are considered as metabolic inflammation[.]” Source: Wikipedia↩︎\n“Serum creatinine (a blood measurement) is an important indicator of kidney function, because it is an easily measured byproduct of muscle metabolism that is excreted unchanged by the kidneys. (…) The reference interval is 0.6–1.3 mg/dL.” Source: Wikipedia↩︎\n“Cystatin C (…) is mainly used as a biomarker of kidney function. (…) Across different studies, the mean reference interval (as defined by the 5th and 95th percentile) was between 0.52 and 0.98 mg/L.” Source: Wikipedia↩︎"
   },
   {
     "objectID": "index.html",
@@ -32,7 +60,7 @@
     "href": "index.html#important-documents",
     "title": "R Workshop: Principal Component Analysis",
     "section": "Important documents",
-    "text": "Important documents\nThe shared document to write R code is located here"
+    "text": "Important documents\nThe shared document to write R code is located here\nLinks to * simulated dataset * fruits and vegetables dataset"
   },
   {
     "objectID": "index.html#prerequisites",
@@ -46,7 +74,7 @@
     "href": "index.html#references",
     "title": "R Workshop: Principal Component Analysis",
     "section": "References",
-    "text": "References"
+    "text": "References\n\nFrançois Husson’s MOOC on exploratory multivariate analysis\nAbdi, H., & Williams, L.J. (2010). Principal component analysis. Wiley Interdisciplinary Reviews: Computational Statistics, 2, 433-459.\nAbdi, H.; & Williams, L. (2022). Correspondence analysis (CA). In B. Frey (Ed.), The SAGE Encyclopedia of Research Design. Thousand Oaks: Sage. pp. 327-339.\nAbdi, H., Guillemot, V., Liu, R., Niang, N., Saporta, G., & Yu, J.-C. (2024). From plain to sparse correspondence analysis: a generalized SVD approach. Statistica Applicata, 35(3), 1-39."
   },
   {
     "objectID": "pages/about.html",
@@ -54,5 +82,19 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "pages/part2.html",
+    "href": "pages/part2.html",
+    "title": "WPCA",
+    "section": "",
+    "text": "In this part, appply the functions that you saw earlier to the “fruits and vegetables” dataset. Link to dataset\nBelow is a random selection of 20 fruits and vegetables.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnom\nssgroupe\nEnergie\nEau\nProteines\nGlucides\nLipides\nSucres\nFibres\n\n\n\n\nPotimarron, pulpe, cuit à l’étouffée\nlégumes cuits\n43.2\n87.3\n1.31\n7.05\n0.50\n4.50\n3.30\n\n\nTétragone cornue, cuite\nlégumes cuits\n16.5\n94.8\n1.30\n1.00\n0.17\n0.25\n1.40\n\n\nChou-fleur, surgelé, cru\nlégumes crus\n28.7\n92.5\n2.09\n2.64\n0.37\n1.91\n1.82\n\n\nMaïs doux, en épis, surgelé, cru\nlégumes crus\n98.6\n73.3\n3.36\n17.00\n1.19\n3.78\n2.65\n\n\nMaïs doux, appertisé, égoutté\nlégumes cuits\n106.0\n75.4\n2.82\n18.40\n1.68\n5.16\n3.10\n\n\nBambou, pousse, crue\nlégumes crus\n38.7\n89.8\n2.52\n5.08\n0.20\n3.00\n1.45\n\n\nMûre (de ronce), crue\nfruits crus\n42.2\n86.1\n1.13\n6.53\n0.70\n6.10\n5.20\n\n\nGombo, fruit, cuit\nlégumes cuits\n23.6\n92.6\n1.87\n2.01\n0.21\n2.01\n2.50\n\n\nFruit de la passion ou maracudja, pulpe et pépins, cru\nfruits crus\n85.8\n73.6\n2.13\n10.90\n3.00\n8.50\n6.80\n\n\nÉpinard, cuit\nlégumes cuits\n23.6\n92.8\n3.20\n0.50\n0.14\n0.47\n2.70\n\n\nSalsifis, surgelé, cru\nlégumes crus\n35.2\n85.8\n2.65\n4.15\n0.15\n2.50\n5.80\n\n\nPetits pois et carottes, surgelés, crus\nlégumes crus\n54.9\n82.3\n3.89\n7.10\n0.37\n3.43\n4.30\n\n\nChou vert, cuit\nlégumes cuits\n25.8\n93.9\n1.03\n3.04\n0.45\n2.79\n2.40\n\n\nTomate, coulis, appertisé (purée de tomates mi-réduite à 11%)\nlégumes cuits\n49.8\n88.2\n2.05\n8.53\n0.20\n5.50\n2.60\n\n\nLégume cuit (aliment moyen)\nlégumes cuits\n40.4\n88.3\n2.11\n5.81\n0.30\n2.48\n2.71\n\n\nArtichaut, cuit\nlégumes cuits\n23.6\n85.8\n2.53\n0.99\n0.28\n0.99\n8.30\n\n\nChou de Bruxelles, surgelé, cuit\nlégumes cuits\n42.7\n86.7\n3.64\n4.22\n0.39\n2.08\n4.10\n\n\nRutabaga, cuit\nlégumes cuits\n27.5\n91.5\n0.93\n4.26\n0.18\n3.95\n1.80\n\n\nCarotte, cuite à la vapeur\nlégumes cuits\n39.1\n87.7\n0.63\n7.33\n0.30\n6.90\n3.70\n\n\nAsperge, verte, crue\nlégumes crus\n27.2\n92.5\n2.46\n2.03\n0.27\n1.50\n2.15"
+  },
+  {
+    "objectID": "pages/part4.html",
+    "href": "pages/part4.html",
+    "title": "WPCA",
+    "section": "",
+    "text": "When running a PCA, be mindful of the following points:\n\nis your data “clean” (missing values, weird distribution, proper names etc.)?\nis your data in the correct format (i.e. wide format, with observations as rows and variables as columns)\nare your variables all quantitative? If not, which variables are “illustrative” (e.g. groups)\nshould you run a “standardized” or a “non-standardized” PCA?\ndid you check the scree-plot?\nwhats does the correlation circle tell about the relationship between variables?"
   }
 ]

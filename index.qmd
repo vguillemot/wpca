@@ -30,6 +30,10 @@ format:
 
 The shared document to write R code is located [here](https://docs.google.com/document/d/1q2WzfESUpgUF56dALGUuw5x7kQ8Qk0_0OJN97L8b8Iw/edit?usp=sharing)
 
+Links to
+  * [simulated dataset](material/simulated_data.xlsx)
+  * [fruits and vegetables dataset](material/fruits_et_legumes.xlsx)
+
 ## Prerequisites
 
 Before class, you were asked to reproduce, with R, the following Figure from a [recent publication](https://www.nature.com/articles/s41586-024-08475-w) with the associated [data](https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-024-08475-w/MediaObjects/41586_2024_8475_MOESM5_ESM.xlsx)
@@ -69,12 +73,12 @@ dat %>%
     y = latex2exp::TeX("Percentage fluorescence versus \\textit{$t_0$}"),
     title = "HEK293T mCherry-[X]") + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-
 ```
-
-
 
 ## References
 
-
+  * François Husson's MOOC on [exploratory multivariate analysis](https://husson.github.io/MOOC_GB/index.html)
+  * Abdi, H., & Williams, L.J. (2010). [Principal component analysis](https://personal.utdallas.edu/~herve/abdi-awPCA2010.pdf). Wiley Interdisciplinary Reviews: Computational Statistics, 2, 433-459.
+  * Abdi, H.; & Williams, L. (2022). [Correspondence analysis (CA)](https://personal.utdallas.edu/~herve/abdi-CA-sage2022.pdf). In B. Frey (Ed.), The SAGE Encyclopedia of Research Design. Thousand Oaks: Sage. pp. 327-339.
+  * Abdi, H., Guillemot, V., Liu, R., Niang, N., Saporta, G., & Yu, J.-C. (2024). [From plain to sparse correspondence analysis: a generalized SVD approach](https://personal.utdallas.edu/~herve/abdi2024-aglnsy-sparseCA.pdf). Statistica Applicata, 35(3), 1-39.
 

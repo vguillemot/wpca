@@ -53,3 +53,11 @@ rsconnect/
 # Office files
 ~$*
 
+# Raw data that are too big
+data/GSE168096_CountTable.txt
+data/GSE189251_day14.txt
+data/preprocessing_group1.R
+data/preprocessing_group2.R
+data/rnaseq_transformed_group1.txt
+data/crisprcas9_transformed_group2.txt
+material/pca.pptx

@@ -1,5 +1,54 @@
 ---
-title: "part3"
+title: ""
 format: html
 ---
+
+# PCA examples
+
+I chose two recent papers published in Nature in which PCA was used.
+Click on the tab corresponding to your group and follow the instructions.
+Prepare a 5-slide presentation in which you will (quickly) explain the context,
+and detail your progress when trying to reproduce the PCA-related figure.
+
+*NB: It is not necessary to download the count matrix, unless you are curious about the difference between running the PCA on count data vs. pre-processed data*
+
+::: {.panel-tabset}
+
+## Group 1
+
+The paper from which your figure was extracted is 
+
+> Bosch, M., Kallin, N., Donakonda, S. et al. A liver immune rheostat regulates CD8 T cell immunity in chronic HBV infection. Nature 631, 867–875 (2024). https://doi.org/10.1038/s41586-024-07630-7
+
+  1. Read the paper.
+  2. Download the pre-processed data that I created from the public data-set [GSE168096](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE168096).
+  3. Explore quickly this data-set. Try to imagine, from indications given in 
+  the paper, the steps that were required to go from the count matrix to this file.
+  4. Reproduce Figure 1-h.
+
+![](../material/figure_group1.png){width=50%}
+
+[Link to compressed data](../data/rnaseq_transformed_group1.zip)
+
+
+## Group 2
+
+The paper from which your figure was extracted is 
+
+> Ruetz, T.J., Pogson, A.N., Kashiwagi, C.M. et al. CRISPR–Cas9 screens reveal regulators of ageing in neural stem cells. Nature 634, 1150–1159 (2024). https://doi.org/10.1038/s41586-024-07972-2
+
+  1. Read the paper.
+  2. Download the pre-processed data that I created from the public data-set [GSE189251](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE189251).
+  3. Explore quickly this data-set. Try to imagine, from indications given in 
+  the paper, the steps that were required to go from the count matrix to this file.
+  4. Reproduce Supplementary Figure 1-d.
+
+![](../material/figure_group2.png){width=50%}
+
+[Link to compressed data](../data/crisprcas9_group2.zip)
+
+
+:::
+
+
 
