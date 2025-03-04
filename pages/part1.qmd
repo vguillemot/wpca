@@ -34,7 +34,7 @@ In this example, there are:
 With this (somewhat not so realistic) example, I want to illustrate a situation where one variable stands alone (CRP) and the other two are very correlated, and at the same time, I want two groups of subjects that have very different mean CRPs. The values are reported in the table below.
 
 ```{r simulated data, echo = FALSE, warning = FALSE, results='asis'}
-set.seed(259702)
+set.seed(2587021)
 center <- \(x) {x-mean(x)}
 i <- sample(1:6)
 simul <- tibble(
