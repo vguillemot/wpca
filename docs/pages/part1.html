@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -134,6 +168,9 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#simulated-data" id="toc-simulated-data" class="nav-link active" data-scroll-target="#simulated-data">(Simulated) Data</a></li>
+  <li><a href="#screeplot" id="toc-screeplot" class="nav-link" data-scroll-target="#screeplot">Screeplot</a></li>
+  <li><a href="#individual-map" id="toc-individual-map" class="nav-link" data-scroll-target="#individual-map">Individual map</a></li>
+  <li><a href="#circle-of-correlation" id="toc-circle-of-correlation" class="nav-link" data-scroll-target="#circle-of-correlation">Circle of correlation</a></li>
   </ul>
 </nav>
     </div>
@@ -227,25 +264,47 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>I decided to use the functions from <code>FactoMineR</code>, but I could have used one of the many functions available in R: <code>prcomp</code>, <code>ade4::dudi.pca</code>, or even <code>eigen</code> or <code>svd</code>. The command is shown below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>res.pca <span class="ot">&lt;-</span> FactoMineR<span class="sc">::</span><span class="fu">PCA</span>(<span class="at">X =</span> simul, <span class="at">scale.unit =</span> <span class="cn">TRUE</span>, <span class="at">quali.sup =</span> <span class="st">"status"</span>, <span class="at">graph =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To truly benefit from all the properties of PCA, we need the three following graphs.</p>
+</section>
+<section id="screeplot" class="level2">
+<h2 class="anchored" data-anchor-id="screeplot">Screeplot</h2>
+<p>The screeplot represents either the variances of the principal components (aka the eigenvalues of either the covariance or the correlation matrix) or, more commonly, the percentage of variance explained by each dimension. Its is used mainly to select the number of dimensions that would capture the most variance.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="part1_files/figure-html/pca-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="part1_files/figure-html/screeplot-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
+</div>
+</section>
+<section id="individual-map" class="level2">
+<h2 class="anchored" data-anchor-id="individual-map">Individual map</h2>
+<p>Here the individual map shows my two clusters of subjects (healthy donors and patients), but they separate on the second dimension! It means that this information is not the main source of variability in the dataset. In other words: there is a block of two highly correlated variables that have (twice as) more weight as the variable that carries the information related to inflammatory disease.</p>
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="part1_files/figure-html/pca-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="part1_files/figure-html/indmap-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
+</div>
+</section>
+<section id="circle-of-correlation" class="level2">
+<h2 class="anchored" data-anchor-id="circle-of-correlation">Circle of correlation</h2>
+<p>Finally, the circle of correlation is very easy to interpret in my example (yey, simulations!): all the pointy ends of the arrows are close to the circle, so I can interpret their respective positions to one another and to the axes.</p>
+<p>CRP is orthogonal to SC and CC (uncorrelated), which are themselves very close to one another (highly correlated). Plus, CRP values are higher in patients than in healthy donor, and the values of SC and CC are not really different between the two groups.</p>
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="part1_files/figure-html/pca-3.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="part1_files/figure-html/corcircle-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>

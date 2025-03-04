@@ -83,16 +83,42 @@ And the 3D plot representing all the data is shown below.
 with(simul, scatterplot3d(x = SC, y = CC, z = CRP, color = as.numeric(status), pch = 16, cex.symbols = 2, type="h"))
 ```
 
+I decided to use the functions from `FactoMineR`, but I could have used one of the many functions available in R: `prcomp`, `ade4::dudi.pca`, or even `eigen` or `svd`. The command is shown below.
 
-
-```{r pca}
-res.pca <- PCA(simul, quali.sup = "status", graph = FALSE)
-
-factoextra::fviz_screeplot(res.pca)
-plotellipses(res.pca)
-plot.PCA(res.pca, choix = "var")
-
+```{r pca, echo = TRUE}
+res.pca <- FactoMineR::PCA(X = simul, scale.unit = TRUE, quali.sup = "status", graph = FALSE)
 ```
+
+To truly benefit from all the properties of PCA, we need the three following graphs. 
+
+## Screeplot
+
+The screeplot represents either the variances of the principal components (aka the eigenvalues of either the covariance or the correlation matrix) or, more commonly, the percentage of variance explained by each dimension. Its is used mainly to select the number of dimensions that would capture the most variance.
+
+```{r screeplot}
+factoextra::fviz_screeplot(res.pca)
+```
+
+## Individual map
+
+Here the individual map shows my two clusters of subjects (healthy donors and patients), but they separate on the second dimension! It means that this information is not the main source of variability in the dataset. In other words: there is a block of two highly correlated variables that have (twice as) more weight as the variable that carries the information related to inflammatory disease.
+
+```{r indmap}
+plotellipses(res.pca)
+```
+
+## Circle of correlation
+
+Finally, the circle of correlation is very easy to interpret in my example (yey, simulations!): all the pointy ends of the arrows are close to the circle, so I can interpret their respective positions to one another and to the axes.
+
+CRP is orthogonal to SC and CC (uncorrelated), which are themselves very close to one another (highly correlated). Plus, CRP values are higher in patients than in healthy donor, and the values of SC and CC are not really different between the two groups.
+
+
+```{r corcircle}
+plot.PCA(res.pca, choix = "var")
+```
+
+
 
 
 

@@ -25,7 +25,28 @@
     "href": "pages/part1.html#simulated-data",
     "title": "WPCA",
     "section": "(Simulated) Data",
-    "text": "(Simulated) Data\nI simulated a 3-dimensional dataset to illustrate this section. In this example, there are:\n\n6 (simulated human) subjects, 3 of them are healthy, and 3 of them have [insert here your favorite auto-immune disease],\n3 variables are measured on these subjects: CRP1, Serum Creatinine (SC)2, and Cystatin C (CC)3.\n\nLink to dataset\nWith this (somewhat not so realistic) example, I want to illustrate a situation where one variable stands alone (CRP) and the other two are very correlated, and at the same time, I want two groups of subjects that have very different mean CRPs. The values are reported in the table below.\n\n\n\n\n\n\n\n\n\nstatus\nCRP\nSC\nCC\n\n\n\n\nH\n2.111\n0.9527\n1.071\n\n\nH\n1.246\n2.335\n2.374\n\n\nH\n1.42\n1.184\n-0.1509\n\n\nD\n7.517\n-0.229\n-0.3311\n\n\nD\n5.671\n1.786\n0.9783\n\n\nD\n4.535\n-0.02739\n0.2584\n\n\n\nBelow is represented the correlation matrix as a correlogram.\n\n\n\n\n\n\n\n\n\nAnd the 3D plot representing all the data is shown below."
+    "text": "(Simulated) Data\nI simulated a 3-dimensional dataset to illustrate this section. In this example, there are:\n\n6 (simulated human) subjects, 3 of them are healthy, and 3 of them have [insert here your favorite auto-immune disease],\n3 variables are measured on these subjects: CRP1, Serum Creatinine (SC)2, and Cystatin C (CC)3.\n\nLink to dataset\nWith this (somewhat not so realistic) example, I want to illustrate a situation where one variable stands alone (CRP) and the other two are very correlated, and at the same time, I want two groups of subjects that have very different mean CRPs. The values are reported in the table below.\n\n\n\n\n\n\n\n\n\nstatus\nCRP\nSC\nCC\n\n\n\n\nH\n2.111\n0.9527\n1.071\n\n\nH\n1.246\n2.335\n2.374\n\n\nH\n1.42\n1.184\n-0.1509\n\n\nD\n7.517\n-0.229\n-0.3311\n\n\nD\n5.671\n1.786\n0.9783\n\n\nD\n4.535\n-0.02739\n0.2584\n\n\n\nBelow is represented the correlation matrix as a correlogram.\n\n\n\n\n\n\n\n\n\nAnd the 3D plot representing all the data is shown below.\n\n\n\n\n\n\n\n\n\nI decided to use the functions from FactoMineR, but I could have used one of the many functions available in R: prcomp, ade4::dudi.pca, or even eigen or svd. The command is shown below.\n\nres.pca &lt;- FactoMineR::PCA(X = simul, scale.unit = TRUE, quali.sup = \"status\", graph = FALSE)\n\nTo truly benefit from all the properties of PCA, we need the three following graphs."
+  },
+  {
+    "objectID": "pages/part1.html#screeplot",
+    "href": "pages/part1.html#screeplot",
+    "title": "WPCA",
+    "section": "Screeplot",
+    "text": "Screeplot\nThe screeplot represents either the variances of the principal components (aka the eigenvalues of either the covariance or the correlation matrix) or, more commonly, the percentage of variance explained by each dimension. Its is used mainly to select the number of dimensions that would capture the most variance."
+  },
+  {
+    "objectID": "pages/part1.html#individual-map",
+    "href": "pages/part1.html#individual-map",
+    "title": "WPCA",
+    "section": "Individual map",
+    "text": "Individual map\nHere the individual map shows my two clusters of subjects (healthy donors and patients), but they separate on the second dimension! It means that this information is not the main source of variability in the dataset. In other words: there is a block of two highly correlated variables that have (twice as) more weight as the variable that carries the information related to inflammatory disease."
+  },
+  {
+    "objectID": "pages/part1.html#circle-of-correlation",
+    "href": "pages/part1.html#circle-of-correlation",
+    "title": "WPCA",
+    "section": "Circle of correlation",
+    "text": "Circle of correlation\nFinally, the circle of correlation is very easy to interpret in my example (yey, simulations!): all the pointy ends of the arrows are close to the circle, so I can interpret their respective positions to one another and to the axes.\nCRP is orthogonal to SC and CC (uncorrelated), which are themselves very close to one another (highly correlated). Plus, CRP values are higher in patients than in healthy donor, and the values of SC and CC are not really different between the two groups."
   },
   {
     "objectID": "pages/part1.html#footnotes",
