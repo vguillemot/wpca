@@ -45,7 +45,7 @@ The paper from which your figure was extracted is
 
 ![](../material/figure_group2.png){width=50%}
 
-[Link to compressed data](../data/crisprcas9_group2.zip)
+[Link to compressed data](../data/crisprcas9_transformed_group2.zip)
 
 
 :::
