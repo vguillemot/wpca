@@ -18,7 +18,7 @@ and detail your progress when trying to reproduce the PCA-related figure.
 
 The paper from which your figure was extracted is 
 
-> Bosch, M., Kallin, N., Donakonda, S. et al. A liver immune rheostat regulates CD8 T cell immunity in chronic HBV infection. Nature 631, 867–875 (2024). https://doi.org/10.1038/s41586-024-07630-7
+> Bosch, M., Kallin, N., Donakonda, S. et al. A liver immune rheostat regulates CD8 T cell immunity in chronic HBV infection. Nature 631, 867–875 (2024). [https://doi.org/10.1038/s41586-024-07630-7](https://doi.org/10.1038/s41586-024-07630-7)
 
   1. Read the paper.
   2. Download the pre-processed data that I created from the public data-set [GSE168096](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE168096).
@@ -35,7 +35,7 @@ The paper from which your figure was extracted is
 
 The paper from which your figure was extracted is 
 
-> Ruetz, T.J., Pogson, A.N., Kashiwagi, C.M. et al. CRISPR–Cas9 screens reveal regulators of ageing in neural stem cells. Nature 634, 1150–1159 (2024). https://doi.org/10.1038/s41586-024-07972-2
+> Ruetz, T.J., Pogson, A.N., Kashiwagi, C.M. et al. CRISPR–Cas9 screens reveal regulators of ageing in neural stem cells. Nature 634, 1150–1159 (2024). [https://doi.org/10.1038/s41586-024-07972-2](https://doi.org/10.1038/s41586-024-07972-2)
 
   1. Read the paper.
   2. Download the pre-processed data that I created from the public data-set [GSE189251](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE189251).
